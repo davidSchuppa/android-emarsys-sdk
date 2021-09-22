@@ -42,7 +42,7 @@ jobs:
       - name: Run Blackduck scan
         shell: bash
         run: |
-          ./blackduck.sh
+          ./blackduck.sh -d
 
 #  - name: Trigger Sample App Build
 #      uses: peter-evans/repository-dispatch@v1
