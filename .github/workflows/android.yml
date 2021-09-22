@@ -35,10 +35,13 @@ jobs:
           name: google-services.json
           json: ${{ secrets.GOOGLE_SERVICES_JSON }}
           dir: sample
+      - name: Godmode
+        shell: bash
+        run: |
+          chmod +x blackduck.sh
       - name: Run Blackduck scan
         shell: bash
         run: |
-          chmod +x blackduck.sh \
           ./blackduck.sh
 
 #  - name: Trigger Sample App Build
